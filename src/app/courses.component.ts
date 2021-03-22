@@ -1,5 +1,4 @@
 
-import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CoursesService } from './courses.service';
 
@@ -10,10 +9,7 @@ import { CoursesService } from './courses.service';
 })
 export class CoursesComponent {
 
-    headers = new HttpHeaders()
-        .set('content-type', 'application/json')
-        .set('Access-Control-Allow-Origin', '*');
-
+    
     courses = {};
 
     fileJson: any;
