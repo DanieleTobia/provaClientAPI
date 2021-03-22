@@ -14,6 +14,6 @@ export class CoursesService {
     }
 
     getCourses() {
-        return this.http.get('http://localhost:1234/file.php');
+        return this.http.get('https://reqbin.com/echo/get/json');
     }
 }

@@ -1,21 +1,18 @@
 
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { CoursesService } from './courses.service';
 
 @Component({
     selector: 'courses',
-    template: `
-    <h2>{{ "Title: " + getTitle() }}</h2>
-    <div> "JSON: <br>" {{ fileJson }}</div>
-    `
+    template: `<h2>{{"Json: "+ fileJson }}</h2>`
+
 })
 export class CoursesComponent {
-    title = "List of courses";
 
-    getTitle() {
-        return this.title;
-    }
+    headers = new HttpHeaders()
+        .set('content-type', 'application/json')
+        .set('Access-Control-Allow-Origin', '*');
 
     courses = {};
 
